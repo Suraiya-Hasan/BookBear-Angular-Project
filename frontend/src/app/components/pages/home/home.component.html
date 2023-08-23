@@ -1,0 +1,30 @@
+<ul>
+    <li *ngFor="let book of books">
+       <a routerLink='/book/{{book.id}}'>
+        <img [src]="book.imageUrl" [alt]="book.title" class="home-img"/>
+        <div class="content">
+            <div class="name">
+                {{book.title}}
+            </div>
+        </div>
+        <span class="favorite {{book.favorite? '' : 'not'}}">
+            ♥
+        </span>
+        <div class="stars">
+            <star-rating [stars]="book.stars"></star-rating>
+        </div>
+        <div class="product-item-footer">
+            <div class="genres">
+                <span *ngFor="let genre of book.genres">{{genre}}
+                </span>
+            </div>
+            <div class="published-year">
+                <span>🕐</span> {{book.publishedYear}}
+            </div>
+            <div class="price">
+                <span>{{book.price | currency}}</span>
+            </div>
+        </div>
+       </a> 
+    </li>
+</ul>
