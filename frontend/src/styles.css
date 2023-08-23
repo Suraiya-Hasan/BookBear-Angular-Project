@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --black: #0b0a07;
+  --grey-light: #bbcea8;
+  --light-beige: #e3d87e;
+  --light-mango-yellow: #f0ec57;
+  --grey-dark: #748067;
+  --white: whitesmoke;
+}
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+button {
+  font-family: Baskerville, "sans-serif";
+}
+
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
