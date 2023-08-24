@@ -20,4 +20,7 @@ export class BookService {
           .includes(searchTerm.toLowerCase())
       );
   }
+  getBookById(bookID: string): Book {
+    return this.getAll().find(book => book.id == bookID) ?? new Book();
+  }
 }

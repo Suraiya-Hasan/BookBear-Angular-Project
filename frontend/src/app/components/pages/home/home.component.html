@@ -8,9 +8,12 @@
             <div class="name">
                 {{book.title}}
             </div>
+            <div>
+                {{book.author}}
+            </div>
         </div>
         <span class="favorite {{book.favorite? '' : 'not'}}">
-            ♥
+            ❤
         </span>
         <div class="stars">
             <star-rating [stars]="book.stars"></star-rating>

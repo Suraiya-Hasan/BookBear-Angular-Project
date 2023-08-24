@@ -11,7 +11,8 @@ export const sample_books: Book[] = [
         stars: 4.5,
         imageUrl: 'assets/hp1.jpg',
         genres: ['Fantasy', 'Adventure', 'Narrative'],
-        publishedYear: 1997
+        publishedYear: 1997,
+        tags: ['Children\'s Book', 'Adventure', 'Fantasy']
     },
     {
         id: '2',
@@ -22,7 +23,8 @@ export const sample_books: Book[] = [
         stars: 4.5,
         imageUrl: 'assets/hp2.jpeg',
         genres: ['Fantasy', 'Adventure', 'Narrative'],
-        publishedYear: 1998
+        publishedYear: 1998,
+        tags: ['Children\'s Book', 'Adventure', 'Fantasy']
     },
     {
         id: '3',
@@ -33,7 +35,8 @@ export const sample_books: Book[] = [
         stars: 3.0,
         imageUrl: 'assets/hp3.jpg',
         genres: ['Fantasy', 'Adventure', 'Narrative'],
-        publishedYear: 1999
+        publishedYear: 1999,
+        tags: ['Children\'s Book', 'Adventure', 'Fantasy']
     },
     {
         id: '4',
@@ -44,7 +47,8 @@ export const sample_books: Book[] = [
         stars: 5.0,
         imageUrl: 'assets/hp4.jpeg',
         genres: ['Fantasy', 'Adventure', 'Narrative'],
-        publishedYear: 1999
+        publishedYear: 1999,
+        tags: ['Children\'s Book', 'Adventure', 'Fantasy']
     },
     {
         id: '5',
@@ -55,7 +59,8 @@ export const sample_books: Book[] = [
         stars: 5.0,
         imageUrl: 'assets/hp5.jpeg',
         genres: ['Fantasy', 'Adventure', 'Narrative'],
-        publishedYear: 2003
+        publishedYear: 2003,
+        tags: ['Children\'s Book', 'Adventure', 'Fantasy']
     },
     {
         id: '6',
@@ -66,7 +71,8 @@ export const sample_books: Book[] = [
         stars: 5.0,
         imageUrl: 'assets/hp7.jpeg',
         genres: ['Fantasy', 'Adventure', 'Narrative'],
-        publishedYear: 2005
+        publishedYear: 2005,
+        tags: ['Children\'s Book', 'Adventure', 'Fantasy']
     },
     {
         id: '7',
@@ -77,6 +83,7 @@ export const sample_books: Book[] = [
         stars: 5.0,
         imageUrl: 'assets/hp6.jpg',
         genres: ['Fantasy', 'Adventure', 'Narrative'],
-        publishedYear: 2007
+        publishedYear: 2007,
+        tags: ['Children\'s Book', 'Adventure', 'Fantasy']
     },
 ]

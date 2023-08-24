@@ -8,4 +8,5 @@ export class Book {
     imageUrl!: string;
     genres!: string[];
     publishedYear!: number;
+    tags!: string[];
 }
