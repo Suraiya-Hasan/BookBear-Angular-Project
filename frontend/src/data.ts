@@ -8,20 +8,20 @@ export const sample_books: Book[] = [
         author: 'J K Rowling',
         price: 250,
         favorite: true,
-        stars: 1.0,
+        stars: 4.5,
         imageUrl: 'assets/hp1.jpg',
-        genres: ['Fantasy', 'Adventure', 'Children\'s Film', 'Narrative'],
+        genres: ['Fantasy', 'Adventure', 'Narrative'],
         publishedYear: 1997
     },
     {
         id: '2',
-        title: 'Harry Potter and the Chamber of ',
+        title: 'Harry Potter and the Chamber of Secrets',
         author: 'J K Rowling',
         price: 250,
         favorite: true,
         stars: 4.5,
         imageUrl: 'assets/hp2.jpeg',
-        genres: ['Fantasy', 'Adventure', 'Children\'s Film', 'Narrative'],
+        genres: ['Fantasy', 'Adventure', 'Narrative'],
         publishedYear: 1998
     },
     {
@@ -32,7 +32,7 @@ export const sample_books: Book[] = [
         favorite: true,
         stars: 3.0,
         imageUrl: 'assets/hp3.jpg',
-        genres: ['Fantasy', 'Adventure', 'Children\'s Film', 'Narrative'],
+        genres: ['Fantasy', 'Adventure', 'Narrative'],
         publishedYear: 1999
     },
     {
@@ -43,7 +43,7 @@ export const sample_books: Book[] = [
         favorite: true,
         stars: 5.0,
         imageUrl: 'assets/hp4.jpeg',
-        genres: ['Fantasy', 'Adventure', 'Children\'s Film', 'Narrative'],
+        genres: ['Fantasy', 'Adventure', 'Narrative'],
         publishedYear: 1999
     },
     {
@@ -51,10 +51,10 @@ export const sample_books: Book[] = [
         title: 'Harry Potter and the Order of Phoenix',
         author: 'J K Rowling',
         price: 250,
-        favorite: true,
+        favorite: false,
         stars: 5.0,
-        imageUrl: 'assets/hp4.jpeg',
-        genres: ['Fantasy', 'Adventure', 'Children\'s Film', 'Narrative'],
+        imageUrl: 'assets/hp5.jpeg',
+        genres: ['Fantasy', 'Adventure', 'Narrative'],
         publishedYear: 2003
     },
     {
@@ -64,8 +64,8 @@ export const sample_books: Book[] = [
         price: 250,
         favorite: true,
         stars: 5.0,
-        imageUrl: 'assets/hp6.jpg',
-        genres: ['Fantasy', 'Adventure', 'Children\'s Film', 'Narrative'],
+        imageUrl: 'assets/hp7.jpeg',
+        genres: ['Fantasy', 'Adventure', 'Narrative'],
         publishedYear: 2005
     },
     {
@@ -75,8 +75,8 @@ export const sample_books: Book[] = [
         price: 250,
         favorite: true,
         stars: 5.0,
-        imageUrl: 'assets/hp7.jpeg',
-        genres: ['Fantasy', 'Adventure', 'Children\'s Film', 'Narrative'],
+        imageUrl: 'assets/hp6.jpg',
+        genres: ['Fantasy', 'Adventure', 'Narrative'],
         publishedYear: 2007
     },
 ]
