@@ -6,7 +6,8 @@ import { BookPageComponent } from './components/pages/book-page/book-page.compon
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'search/:searchTerm', component: HomeComponent },
-  { path: 'book/:id', component: BookPageComponent }
+  { path: 'tag/:tag', component: HomeComponent },
+  { path: 'book/:id', component: BookPageComponent },
 ];
 
 @NgModule({

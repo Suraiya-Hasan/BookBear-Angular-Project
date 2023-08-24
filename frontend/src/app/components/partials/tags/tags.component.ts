@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BookService } from 'src/app/services/book.service';
+import { Tag } from 'src/app/shared/models/Tag';
 
 @Component({
   selector: 'app-tags',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./tags.component.css']
 })
 export class TagsComponent {
-
+  tags?: Tag[];
+  constructor(bookService: BookService) {
+    this.tags = bookService.getAllTags();
+  }
 }

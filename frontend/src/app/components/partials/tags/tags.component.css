@@ -16,3 +16,7 @@ div a {
   font-weight: 600;
   color: blue;
 }
+
+.active {
+  background-color: #00ffbf;
+}

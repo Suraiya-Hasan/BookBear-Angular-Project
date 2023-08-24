@@ -1,4 +1,5 @@
 import { Book } from "./app/shared/models/Book";
+import { Tag } from "./app/shared/models/Tag";
 
 
 export const sample_books: Book[] = [
@@ -86,4 +87,13 @@ export const sample_books: Book[] = [
         publishedYear: 2007,
         tags: ['Children\'s Book', 'Adventure', 'Fantasy']
     },
+]
+
+export const sample_tags: Tag[] = [
+    { name: 'All', count: 7 },
+    { name: 'Fantasy', count: 5 },
+    { name: 'Adventure', count: 5 },
+    { name: 'Comedy', count: 0 },
+    { name: 'Dark', count: 2 },
+    { name: 'YA', count: 0 }
 ]
