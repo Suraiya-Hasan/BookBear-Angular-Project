@@ -12,4 +12,12 @@ export class BookService {
   getAll(): Book[] {
     return sample_books;
   }
+
+  getAllBookBySearchTerm(searchTerm: string) {
+    return this.getAll()
+      .filter(
+        book => book.title.toLowerCase()
+          .includes(searchTerm.toLowerCase())
+      );
+  }
 }
