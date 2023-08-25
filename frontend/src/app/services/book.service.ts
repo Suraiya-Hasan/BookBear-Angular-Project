@@ -3,32 +3,31 @@ import { Book } from './../shared/models/Book';
 import { sample_books, sample_tags } from '../../data';
 import { Tag } from '../shared/models/Tag';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { BOOKS_BY_ID_URL, BOOKS_BY_SEARCH_URL, BOOKS_BY_TAG_URL, BOOKS_TAGS_URL, BOOKS_URL } from '../shared/constants/urls';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
-  getAll(): Book[] {
-    return sample_books;
+  getAll(): Observable<Book[]> {
+    return this.http.get<Book[]>(BOOKS_URL);
   }
 
   getAllBookBySearchTerm(searchTerm: string) {
-    return this.getAll()
-      .filter(
-        book => book.title.toLowerCase()
-          .includes(searchTerm.toLowerCase())
-      );
+    return this.http.get<Book[]>(BOOKS_BY_SEARCH_URL + searchTerm)
   }
-  getBookById(bookID: string): Book {
-    return this.getAll().find(book => book.id == bookID) ?? new Book();
+  getBookById(bookID: string): Observable<Book> {
+    return this.http.get<Book>(BOOKS_BY_ID_URL + bookID);
   }
-  getAllTags(): Tag[] {
-    return sample_tags;
+  getAllTags(): Observable<Tag[]> {
+    return this.http.get<Tag[]>(BOOKS_TAGS_URL);
   }
-  getAllBooksByTag(tag: string): Book[] {
+  getAllBooksByTag(tag: string): Observable<Book[]> {
     // return tag === 'All' ?
     //   this.getAll() :
     //   this.getAll().filter(book => book.tags?.includes(tag))
@@ -37,7 +36,7 @@ export class BookService {
       return this.getAll();
     }
     else {
-      return this.getAll().filter(book => book.tags?.includes(tag));
+      return this.http.get<Book[]>(BOOKS_BY_TAG_URL + tag);
     }
   }
 }

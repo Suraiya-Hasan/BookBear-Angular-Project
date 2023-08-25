@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from '../../../shared/models/Book';
 import { BookService } from '../../../services/book.service';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -14,13 +15,18 @@ export class HomeComponent implements OnInit {
 
 
   constructor(private bookService: BookService, activatedRoute: ActivatedRoute) {
+    let booksObservable: Observable<Book[]>
     activatedRoute.params.subscribe((params) => {
       if (params.searchTerm)
-        this.books = bookService.getAllBookBySearchTerm(params.searchTerm)
+        booksObservable = bookService.getAllBookBySearchTerm(params.searchTerm)
       else if (params.tag)
-        this.books = bookService.getAllBooksByTag(params.tag);
+        booksObservable = bookService.getAllBooksByTag(params.tag);
       else
-        this.books = bookService.getAll();
+        booksObservable = bookService.getAll();
+
+      booksObservable.subscribe((serverBooks) => {
+        this.books = serverBooks;
+      })
     })
   }
 
