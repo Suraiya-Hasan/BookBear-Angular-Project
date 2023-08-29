@@ -3,10 +3,10 @@
         <a routerLink="/" class="logo">Book Bear 📚</a>
         <nav>
             <ul>
-                <li *ngIf="!isAuth">
+                <li *ngIf="!user.name">
                     <a routerLink="/login">Login</a>
                 </li>
-                <li class="menu-container" *ngIf="isAuth">
+                <li class="menu-container" *ngIf="user.name">
                     <a routerLink="/dashboard">{{user.name}}</a>
                     <div class="menu">
                         <a routerLink="/profile">Profile</a>
