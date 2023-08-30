@@ -25,16 +25,14 @@ router.get("/seed", asyncHandler(
 router.post("/login", asyncHandler(
     async (req, res) => {
         const { email, password } = req.body;
-        const user = await UserModel.findOne({ email, password });
-        console.log(user);
+        const user = await UserModel.findOne({ email })
 
-        if (user) {
+        if (user && (await bcrypt.compare(password, user.password))) {
             res.send(generateTokenResponse(user));
         }
         else {
             res.status(HTTP_BAD_REQUEST).send("Email or password doesn't match any user credentials.");
         }
-        console.log(user);
     }
 ))
 
@@ -55,7 +53,8 @@ router.post('/register', asyncHandler(
             email: email.toLowerCase(),
             password: encryptedPass,
             address,
-            isAdmin: false
+            isAdmin: false,
+            token: ''
         }
 
         const dbUser = await UserModel.create(newUser);
@@ -63,7 +62,7 @@ router.post('/register', asyncHandler(
     }))
 
 
-const generateTokenResponse = (user: any) => {
+const generateTokenResponse = (user: User) => {
     const token = jwt.sign({
         email: user.email, isAdmin: user.isAdmin
     }, "RandomText", {
