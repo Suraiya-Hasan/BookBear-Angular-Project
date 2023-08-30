@@ -26,6 +26,7 @@ import { LoadingComponent } from './components/partials/loading/loading.componen
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { OrdersItmListComponent } from './components/partials/orders-itm-list/orders-itm-list.component';
+import { MapComponent } from './components/partials/map/map.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { OrdersItmListComponent } from './components/partials/orders-itm-list/or
     RegisterPageComponent,
     LoadingComponent,
     CheckoutPageComponent,
-    OrdersItmListComponent
+    OrdersItmListComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
