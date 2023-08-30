@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns1="http://sozi.baierouge.fr" version="1.1" viewBox="0 0 256 42" inkscape:version="0.91 r13725" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g transform="translate(-44,0)" fill="#444" fill-opacity="0.5">
+    <rect height="40" width="254" y="1" x="45" stroke-width="1" stroke="#333333">  
+    </rect>
+    <rect height="40" width="20" y="1" x="45">
+      <animate id="p1" attributeName="fill" attributeType="XML" from="#eee" to="#444" dur="0.1s" fill="freeze" begin="0s; p10.end"/>
+    </rect>
+    <rect height="40" width="20" y="1" x="71">
+      <animate id="p2" attributeName="fill" attributeType="XML" from="#eee" to="#444" dur="0.1s" fill="freeze" begin="p1.end"/>
+    </rect>
+    <rect height="40" width="20" y="1" x="97">
+      <animate id="p3" attributeName="fill" attributeType="XML" from="#eee" to="#444" dur="0.1s" fill="freeze" begin="p2.end"/>
+    </rect>
+    <rect height="40" width="20" y="1" x="123">
+      <animate id="p4" attributeName="fill" attributeType="XML" from="#eee" to="#444" dur="0.1s" fill="freeze" begin="p3.end"/>
+    </rect>
+    <rect height="40" width="20" y="1" x="149">
+      <animate id="p5" attributeName="fill" attributeType="XML" from="#eee" to="#444" dur="0.1s" fill="freeze" begin="p4.end"/>
+    </rect>
+    <rect height="40" width="20" y="1" x="175">
+      <animate id="p6" attributeName="fill" attributeType="XML" from="#eee" to="#444" dur="0.1s" fill="freeze" begin="p5.end"/>
+    </rect>
+    <rect height="40" width="20" y="1" x="201">
+      <animate id="p7" attributeName="fill" attributeType="XML" from="#eee" to="#444" dur="0.1s" fill="freeze" begin="p6.end"/>
+    </rect>
+    <rect height="40" width="20" y="1" x="227">
+      <animate id="p8" attributeName="fill" attributeType="XML" from="#eee" to="#444" dur="0.1s" fill="freeze" begin="p7.end"/>
+    </rect>
+    <rect height="40" width="20" y="1" x="253">
+      <animate id="p9" attributeName="fill" attributeType="XML" from="#eee" to="#444" dur="0.1s" fill="freeze" begin="p8.end"/>
+    </rect>
+    <rect height="40" width="20" y="1" x="279">
+      <animate id="p10" attributeName="fill" attributeType="XML" from="#eee" to="#444" dur="0.1s" fill="freeze" begin="p9.end"/>
+    </rect>
+  </g>
+</svg>
