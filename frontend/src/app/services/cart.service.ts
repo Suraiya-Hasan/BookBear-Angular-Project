@@ -8,6 +8,7 @@ import { CartItem } from '../shared/models/CartItem';
   providedIn: 'root'
 })
 export class CartService {
+
   private cart: Cart = this.getCartFromLocalStorage();
   private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
 
@@ -39,6 +40,10 @@ export class CartService {
   }
   getCartObservable(): Observable<Cart> {
     return this.cartSubject.asObservable();
+  }
+
+  getCart(): Cart {
+    return this.cartSubject.value;
   }
 
   private setCartToLocalStorage(): void {
