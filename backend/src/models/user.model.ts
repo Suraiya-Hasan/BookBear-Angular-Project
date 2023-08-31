@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
 export interface User {
     id: string;
@@ -10,7 +10,6 @@ export interface User {
 }
 
 export const UserSchema = new Schema<User>({
-    id: { type: String, unique: true },
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },

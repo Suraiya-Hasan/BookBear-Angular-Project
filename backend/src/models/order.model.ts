@@ -1,6 +1,6 @@
 import { model, Schema, Types } from 'mongoose';
-import { Book, BookSchema } from './book.model';
 import { OrderStatusEnum } from '../constants/order_status';
+import { Book, BookSchema } from './book.model';
 
 export interface LatLng {
     lat: string;
@@ -24,7 +24,7 @@ export const OrderItemSchema = new Schema<OrderItem>(
     {
         book: { type: BookSchema, required: true },
         price: { type: Number, required: true },
-        quantity: { type: Number, required: true },
+        quantity: { type: Number, required: true }
     }
 );
 
@@ -34,18 +34,18 @@ export interface Order {
     totalPrice: number;
     name: string;
     address: string;
-    addressLatLng: LatLng;
+    addressLatLng: LatLng
     paymentId: string;
     status: OrderStatusEnum;
     user: Types.ObjectId;
     createdAt: Date;
-    updatedAt: Date;
+    updatedAt: Date
 }
 
 const orderSchema = new Schema<Order>({
     name: { type: String, required: true },
     address: { type: String, required: true },
-    addressLatLng: { type: String, required: true },
+    addressLatLng: { type: LatLngSchema, required: true },
     paymentId: { type: String },
     totalPrice: { type: Number, required: true },
     items: { type: [OrderItemSchema], required: true },
@@ -59,6 +59,6 @@ const orderSchema = new Schema<Order>({
     toObject: {
         virtuals: true
     }
-})
+});
 
 export const OrderModel = model('order', orderSchema);
